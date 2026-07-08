@@ -29,7 +29,9 @@ const profile = {
   title: 'Aspiring Software Engineer & Full Stack Developer',
   summary:
     'Aspiring Software Engineer and Full Stack Developer with a strong foundation in programming fundamentals and modern web technologies. Passionate about solving real-world problems, writing clean code, and contributing to agile software teams.',
-  location: 'Coimbatore, Tamil Nadu',
+  location: 'READY TO RELOCATE FOR THE RIGHT OPPORTUNITY',
+  availability: 'AVAILABLE FOR INTERNSHIPS AND FULL-TIME ROLES',
+  availability2: 'INTERESTED IN ON-SITE OPPORTUNITIES',
   email: 'dharun.aug@gmail.com',
   phone: '+91-9042572552',
   github: 'github.com/DharunCodez',
@@ -45,7 +47,7 @@ const education = [
   },
   {
     school: 'Little Flower Matric HSS',
-    degree: 'Higher Secondary Certificate (HSC) — Computer Science',
+    degree: 'CS Maths',
     period: '2022 — 2023',
     extra: 'Percentage: 86.1%',
   },
@@ -124,8 +126,12 @@ function App() {
           </div>
           <div className="hero-card">
             <div className="avatar">{profile.name.split(' ').map((word) => word[0]).join('').slice(0, 2)}</div>
-            <h2>Open to opportunities</h2>
-            <p>{profile.location}</p>
+            <h2>OPEN TO OPPORTUNITIES</h2>
+            <p className="hero-card-location">{profile.location}</p>
+            <div className="hero-card-points">
+              <p className="hero-card-point">• {profile.availability}</p>
+              <p className="hero-card-point">• {profile.availability2}</p>
+            </div>
           </div>
         </div>
       </header>
@@ -222,7 +228,7 @@ function App() {
             </div>
             <div className="skills">
               {traits.map((trait) => (
-                <span key={trait}>{trait}</span>
+                <div className="trait-item" key={trait}>• {trait}</div>
               ))}
             </div>
           </div>

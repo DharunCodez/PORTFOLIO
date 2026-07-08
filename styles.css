@@ -140,6 +140,53 @@ a {
   max-width: 360px;
 }
 
+.hero-card h2 {
+  font-size: 1.02rem;
+  margin: 0 0 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.hero-card-location {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.65rem;
+  color: var(--text);
+}
+
+.hero-card-points {
+  display: block;
+}
+
+.hero-card-point {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  line-height: 1.45;
+  position: relative;
+  padding: 0.2rem 0 0.2rem 1.05rem;
+  margin: 0 0 0.35rem;
+}
+
+.hero-card-point:last-child {
+  margin-bottom: 0;
+}
+
+.hero-card-point::before {
+  content: '•';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.16rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
 .avatar {
   width: 70px;
   height: 70px;
@@ -212,17 +259,34 @@ a {
 }
 
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  display: block;
 }
 
-.skills span {
-  padding: 0.7rem 0.95rem;
+.trait-item {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 1.45rem;
+  margin-bottom: 0.7rem;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 0.8rem;
   color: var(--muted);
+  line-height: 1.5;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.trait-item::before {
+  content: '•';
+  position: absolute;
+  left: 0.6rem;
+  top: 0.8rem;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.trait-item:last-child {
+  margin-bottom: 0;
 }
 
 .footer {
